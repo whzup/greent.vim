@@ -42,6 +42,12 @@ function! s:set() abort
     let magenta1 = {'gui': '#ff00ff', 'cterm': '201'}
     let lightcoral = {'gui': '#ff8787', 'cterm': '210'}
     let magenta3 = {'gui': '#af00af', 'cterm': '127'}
+    let orangered1 = {'gui': '#ff5f00', 'cterm': '202'}
+    let orchid2 = {'gui': '#ff87d7', 'cterm': '212'}
+    let gold = {'gui': '#ffd700', 'cterm': '220'}
+    let sandybrown = {'gui': '#ffaf5f', 'cterm': '215'}
+    let mistyrose3 = {'gui': '#d7afaf', 'cterm': '181'}
+    let lightcyan3 = {'gui': '#afd7d7', 'cterm': '152'}
 
     let none           = {'gui': 'NONE',      'cterm': 'NONE'}
     let bold           = {'gui': 'bold',      'cterm': 'bold'}
@@ -67,16 +73,14 @@ function! s:set() abort
     " Syntax groups
     let highlight_group.Comment = [lightseagreen, none, italic, none]
     let highlight_group.Identifier = [hotpink3, none, none, none]
-    let highlight_group.Statement = [rosybrown, none, bold, none]
+    let highlight_group.Statement = [sandybrown, none, bold, none]
     let highlight_group.Function = [lightcoral, none, bold, none]
-    let highlight_group.Constant = [magenta3, none, italic, none]
-
-    if get(g:, 'colorscheme_no_background', 0)
-        let highlight_group.Normal[1]      = bg_none
-        let highlight_group.TabLineFill[1] = bg_none
-        let highlight_group.VertSplit[1]   = bg_none
-        let highlight_group.SignColumn[1]  = bg_none
-    endif
+    let highlight_group.Constant = [magenta3, none, none, none]
+    let highlight_group.Type = [orangered1, none, none, none]
+    let highlight_group.Special = [mistyrose3, none, none, none]
+    let highlight_group.PreProc = [indianred, none, italic, none]
+    let highlight_group.Todo = [hotpink3, lightcyan3, bold, none]
+    let highlight_group.Error = [honeydew2, deeppink3, bold, none]
 
     for [group, colors] in items(highlight_group)
         execute printf('highlight %s guifg=%s guibg=%s gui=%s, guisp=%s ctermfg=%s ctermbg=%s cterm=%s',

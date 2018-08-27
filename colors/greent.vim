@@ -16,38 +16,23 @@ endif
 let g:colors_name = 'greent'
 
 function! s:set() abort
-    let turqoise4 = {'gui': '#008787', 'cterm': '30'}
-    let darkseagreen3 = {'gui': '#87d7af', 'cterm': '115'}
-    let palegreen1 = {'gui': '#afff87', 'cterm': '156'}
+    let turquoise = {'gui': '#008787', 'cterm': '30'}
     let lightcyan = {'gui': '#d7ffff', 'cterm': '195'}
     let indianred = {'gui': '#d75f5f', 'cterm': '167'}
-    let palegreen3 = {'gui': '#5fd75f', 'cterm': '77'}
-    let deepskyblue4 = {'gui': '#005f5f', 'cterm': '23'}
-    let seagreen3 = {'gui': '#5fd787', 'cterm': '78'}
-    let seagreen1 = {'gui': '#5fffaf', 'cterm': '85'}
-    let aquamarine3 = {'gui': '#5fd7af', 'cterm': '79'}
-    let chartreuse3 = {'gui': '#5fd700', 'cterm': '76'}
-    let mediumspringgreen = {'gui': '#00ffaf', 'cterm': '49'}
+    let palegreen = {'gui': '#5fd75f', 'cterm': '77'}
+    let deepskyblue = {'gui': '#005f5f', 'cterm': '23'}
     let lightgreen = {'gui': '#87ff87' , 'cterm': '120'}
-    let darkseagreen2 = {'gui': '#afffaf', 'cterm': '157'}
-    let honeydew2 = {'gui': '#d7ffd7', 'cterm': '194'}
+    let darkseagreen = {'gui': '#afffaf', 'cterm': '157'}
+    let honeydew = {'gui': '#d7ffd7', 'cterm': '194'}
     let lightseagreen = {'gui': '#00afaf', 'cterm': '37'}
-    let hotpink3 = {'gui': '#d75f5f', 'cterm': '168'}
-    let darkseagreen1 = {'gui': '#d7ffaf', 'cterm': '193'}
-    let darkolivegreen3 = {'gui': '#87d787', 'cterm': '113'}
-    let deeppink3 = {'gui': '#d7005f', 'cterm': '161'}
-    let lightsalmon1 = {'gui': '#ffaf87', 'cterm': '216'}
-    let rosybrown = {'gui': '#af8787', 'cterm': '138'}
-    let lightskyblue3 = {'gui': '#87afd7', 'cterm': '110'}
-    let magenta1 = {'gui': '#ff00ff', 'cterm': '201'}
+    let hotpink = {'gui': '#d75f5f', 'cterm': '168'}
+    let deeppink = {'gui': '#d7005f', 'cterm': '161'}
     let lightcoral = {'gui': '#ff8787', 'cterm': '210'}
-    let magenta3 = {'gui': '#af00af', 'cterm': '127'}
+    let magenta = {'gui': '#af00af', 'cterm': '127'}
     let orangered1 = {'gui': '#ff5f00', 'cterm': '202'}
-    let orchid2 = {'gui': '#ff87d7', 'cterm': '212'}
-    let gold = {'gui': '#ffd700', 'cterm': '220'}
     let sandybrown = {'gui': '#ffaf5f', 'cterm': '215'}
-    let mistyrose3 = {'gui': '#d7afaf', 'cterm': '181'}
-    let lightcyan3 = {'gui': '#afd7d7', 'cterm': '152'}
+    let mistyrose = {'gui': '#d7afaf', 'cterm': '181'}
+    let lightcyan = {'gui': '#afd7d7', 'cterm': '152'}
 
     let none           = {'gui': 'NONE',      'cterm': 'NONE'}
     let bold           = {'gui': 'bold',      'cterm': 'bold'}
@@ -60,27 +45,27 @@ function! s:set() abort
 
     let highlight_group = {}
 
-    let highlight_group.Normal = [deepskyblue4, darkseagreen2, none, none]
-    let highlight_group.Visual = [none, palegreen3, none, none]
+    let highlight_group.Normal = [deepskyblue, darkseagreen, none, none]
+    let highlight_group.Visual = [none, palegreen, none, none]
     " Cursor
-    let highlight_group.Cursor = [deepskyblue4, aquamarine3, none, none]
+    let highlight_group.Cursor = [deepskyblue, lightcoral, none, none]
     let highlight_group.CursorLine = [none, lightgreen, none, none]
 
     " Sidebar
-    let highlight_group.LineNr = [lightcyan, turqoise4, bold, none]
-    let highlight_group.CursorLineNr = [deepskyblue4, none, bolditalic, none]
+    let highlight_group.LineNr = [lightcyan, turquoise, bold, none]
+    let highlight_group.CursorLineNr = [deepskyblue, none, bolditalic, none]
 
     " Syntax groups
     let highlight_group.Comment = [lightseagreen, none, italic, none]
-    let highlight_group.Identifier = [hotpink3, none, none, none]
+    let highlight_group.Identifier = [hotpink, none, none, none]
     let highlight_group.Statement = [sandybrown, none, bold, none]
     let highlight_group.Function = [lightcoral, none, bold, none]
-    let highlight_group.Constant = [magenta3, none, none, none]
+    let highlight_group.Constant = [magenta, none, none, none]
     let highlight_group.Type = [orangered1, none, none, none]
-    let highlight_group.Special = [mistyrose3, none, none, none]
+    let highlight_group.Special = [mistyrose, none, none, none]
     let highlight_group.PreProc = [indianred, none, italic, none]
-    let highlight_group.Todo = [hotpink3, lightcyan3, bold, none]
-    let highlight_group.Error = [honeydew2, deeppink3, bold, none]
+    let highlight_group.Todo = [hotpink, lightcyan, bold, none]
+    let highlight_group.Error = [honeydew, deeppink, bold, none]
 
     for [group, colors] in items(highlight_group)
         execute printf('highlight %s guifg=%s guibg=%s gui=%s, guisp=%s ctermfg=%s ctermbg=%s cterm=%s',

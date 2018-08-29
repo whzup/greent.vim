@@ -43,6 +43,7 @@ function! s:set() abort
     let mediumturquoise = {'gui': '#5fd7d7', 'cterm': '80'}
     let cornflowerblue = {'gui': '#5f87ff', 'cterm': '69'}
     let khaki = {'gui': '#d7d75f', 'cterm': '185'}
+    let salmon = {'gui': '#ff875f', 'cterm': '209'}
 
     let none           = {'gui': 'NONE',      'cterm': 'NONE'}
     let bold           = {'gui': 'bold',      'cterm': 'bold'}
@@ -79,11 +80,12 @@ function! s:set() abort
     let highlight_group.String = [cornflowerblue, none, italic, none]
     let highlight_group.Number = [chartreuse, none, none, none]
     let highlight_group.Type = [orangered, none, none, none]
-    let highlight_group.Special = [plum, none, none, none]
-    let highlight_group.PreProc = [indianred, none, italic, none]
-    let highlight_group.Todo = [hotpink, lightcyan, bold, none]
+    let highlight_group.Special = [hotpink, none, none, none]
+    let highlight_group.PreProc = [salmon, none, bold, none]
+    let highlight_group.Todo = [cadetblue, honeydew, bold, none]
     let highlight_group.Error = [honeydew, deeppink, bold, none]
     let highlight_group.Underlined = [khaki, none, underline, none]
+ 
 
     let highlight_group.ModeMsg = [lightcoral, none, bold, none]
     let highlight_group.SpecialKey = [deepskyblue, none, none, none]

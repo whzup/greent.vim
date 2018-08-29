@@ -29,10 +29,20 @@ function! s:set() abort
     let deeppink = {'gui': '#d7005f', 'cterm': '161'}
     let lightcoral = {'gui': '#ff8787', 'cterm': '210'}
     let magenta = {'gui': '#af00af', 'cterm': '127'}
-    let orangered1 = {'gui': '#ff5f00', 'cterm': '202'}
+    let orangered = {'gui': '#ff5f00', 'cterm': '202'}
     let sandybrown = {'gui': '#ffaf5f', 'cterm': '215'}
     let mistyrose = {'gui': '#d7afaf', 'cterm': '181'}
     let lightcyan = {'gui': '#afd7d7', 'cterm': '152'}
+    let cadetblue = {'gui': '#5fafaf', 'cterm': '73'}
+    let chartreuse = {'gui': '#5faf00', 'cterm': '70'}
+    let cyan = {'gui': '#00d7af', 'cterm': '43'}
+    let lightgoldenrod = {'gui': '#d7af5f', 'cterm': '179'}
+    let plum = {'gui': '#d787d7', 'cterm': '176'}
+    let steelblue = {'gui': '#5fafff', 'cterm': '75'}
+    let rosybrown = {'gui': '#af8787', 'cterm': '138'}
+    let mediumturquoise = {'gui': '#5fd7d7', 'cterm': '80'}
+    let cornflowerblue = {'gui': '#5f87ff', 'cterm': '69'}
+    let khaki = {'gui': '#d7d75f', 'cterm': '185'}
 
     let none           = {'gui': 'NONE',      'cterm': 'NONE'}
     let bold           = {'gui': 'bold',      'cterm': 'bold'}
@@ -55,17 +65,28 @@ function! s:set() abort
     let highlight_group.LineNr = [lightcyan, turquoise, bold, none]
     let highlight_group.CursorLineNr = [deepskyblue, none, bolditalic, none]
 
+    " Folds
+    let highlight_group.Folded = [cadetblue, honeydew, none, none]
+
+    let highlight_group.MatchParen = [lightcoral, cyan, none, none]
+
     " Syntax groups
     let highlight_group.Comment = [lightseagreen, none, italic, none]
-    let highlight_group.Identifier = [hotpink, none, none, none]
-    let highlight_group.Statement = [sandybrown, none, bold, none]
+    let highlight_group.Identifier = [lightgoldenrod, none, none, none]
+    let highlight_group.Statement = [cadetblue, none, bold, none]
     let highlight_group.Function = [lightcoral, none, bold, none]
-    let highlight_group.Constant = [magenta, none, none, none]
-    let highlight_group.Type = [orangered1, none, none, none]
-    let highlight_group.Special = [mistyrose, none, none, none]
+    let highlight_group.Constant = [steelblue, none, none, none]
+    let highlight_group.String = [cornflowerblue, none, italic, none]
+    let highlight_group.Number = [chartreuse, none, none, none]
+    let highlight_group.Type = [orangered, none, none, none]
+    let highlight_group.Special = [plum, none, none, none]
     let highlight_group.PreProc = [indianred, none, italic, none]
     let highlight_group.Todo = [hotpink, lightcyan, bold, none]
     let highlight_group.Error = [honeydew, deeppink, bold, none]
+    let highlight_group.Underlined = [khaki, none, underline, none]
+
+    let highlight_group.ModeMsg = [lightcoral, none, bold, none]
+    let highlight_group.SpecialKey = [deepskyblue, none, none, none]
 
     for [group, colors] in items(highlight_group)
         execute printf('highlight %s guifg=%s guibg=%s gui=%s, guisp=%s ctermfg=%s ctermbg=%s cterm=%s',

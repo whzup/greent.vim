@@ -2,7 +2,7 @@
 " Name: greent.vim
 " Description: A colorscheme for vim
 " Author: Aaron Moser
-" -------------------------------------
+
 
 " Clear highlights
 highlight clear
@@ -47,6 +47,7 @@ function! s:set() abort
     let darkerseagreen = {'gui': '#afd787', 'cterm': '150'}
     let springgreen = {'gui': '#00af5f', 'cterm': '35'}
     let lightyellow = {'gui': '#d7d7af', 'cterm': '187'}
+    let lightsalmon = {'gui': '#ffaf87', 'cterm': '175'}
 
     let none           = {'gui': 'NONE',      'cterm': 'NONE'}
     let bold           = {'gui': 'bold',      'cterm': 'bold'}
@@ -86,7 +87,7 @@ function! s:set() abort
     let highlight_group.Constant = [steelblue, none, none, none]
     let highlight_group.String = [cornflowerblue, none, italic, none]
     let highlight_group.Number = [chartreuse, none, none, none]
-    let highlight_group.Type = [orangered, none, none, none]
+    let highlight_group.Type = [lightsalmon, none, none, none]
     let highlight_group.Special = [hotpink, none, none, none]
     let highlight_group.PreProc = [salmon, none, bold, none]
     let highlight_group.Todo = [cadetblue, honeydew, bold, none]

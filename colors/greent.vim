@@ -32,7 +32,7 @@ function! s:set() abort
     let khaki           = {'gui': "#d7d75f" ,'cterm':        '185'}
     let salmon          = {'gui': "#ff875f" ,'cterm':        '209'}
     let darkerseagreen  = {'gui': "#afd787" ,'cterm':        '150'}
-    let lightpink     = {'gui': "#d7d7af" ,'cterm':        '187'}
+    let lightpink       = {'gui': "#d7d7af" ,'cterm':        '187'}
     let lightsalmon     = {'gui': "#ffaf87" ,'cterm':        '175'}
 
     let none            = {'gui': "NONE",      "cterm":      "NONE"}
@@ -58,6 +58,7 @@ function! s:set() abort
     let highlight_group.Directory    = [cadetblue, none, none, none]
     let highlight_group.Title        = [none, none, bold, none]
     let highlight_group.WarningMsg   = [lightgoldenrod, lightpink, bold, none]
+    let highlight_group.EndOfBuffer  = [lightpink, none, bold, none]
 
     " Cursor
     let highlight_group.Cursor       = [lightcoral, none, none, none]
@@ -80,12 +81,12 @@ function! s:set() abort
     let highlight_group.Constant     = [steelblue, none, none, none]
     let highlight_group.String       = [cornflowerblue, none, none, none]
     let highlight_group.Number       = [chartreuse, none, none, none]
-    let highlight_group.Type         = [deeppink, none, none, none]
+    let highlight_group.Type         = [cornflowerblue, none, bold, none]
     let highlight_group.Special      = [hotpink, none, none, none]
     let highlight_group.PreProc      = [salmon, none, bold, none]
     let highlight_group.Todo         = [cadetblue, honeydew, bold, none]
     let highlight_group.Error        = [honeydew, deeppink, bold, none]
-    let highlight_group.Underlined   = [khaki, none, underline, none]
+    let highlight_group.Underlined   = [lightcoral, none, underline, none]
 
     " Tabs
     let highlight_group.TabLineSel   = [deepskyblue, honeydew, bold, none]
@@ -118,3 +119,13 @@ function! s:set() abort
     endfor
 endfunction
 call s:set()
+
+" NERDTree
+hi link NerdTreeCWD         Character
+hi link NerdTreeHelpKey     Character
+hi link NerdTreeHelpTitle   Statement
+hi link NerdTreeOpenable    Comment
+hi link NerdTreeClosable    Special
+hi link NerdTreeDir         Statement
+hi link NerdTreeDirSlash    Identifier
+

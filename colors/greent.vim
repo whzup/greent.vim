@@ -33,6 +33,7 @@ function! s:set() abort
     let darkerseagreen  = {'gui': "#afd787" ,'cterm':        '150'}
     let lightpink       = {'gui': "#d7d7af" ,'cterm':        '187'}
     let lightsalmon     = {'gui': "#ffaf87" ,'cterm':        '175'}
+    let darkestseagreen = {'gui': "#5faf5f" ,'cterm':        '71'}
 
     let none            = {'gui': "NONE",      "cterm":      "NONE"}
     let bold            = {'gui': "bold",      "cterm":      "bold"}
@@ -47,7 +48,7 @@ function! s:set() abort
 
     " General
     let highlight_group.Normal       = [deepskyblue, darkseagreen, none, none]
-    let highlight_group.Visual       = [chartreuse, honeydew, bold, none]
+    let highlight_group.Visual       = [darkestseagreen, honeydew, bold, none]
     let highlight_group.ColorColumn  = [none, honeydew, none, none]
     let highlight_group.SignColumn   = [deeppink, none, none, none]
     let highlight_group.IncSearch    = [deepskyblue, hotpink, none, none]
@@ -57,6 +58,7 @@ function! s:set() abort
     let highlight_group.Directory    = [cadetblue, none, none, none]
     let highlight_group.Title        = [none, none, bold, none]
     let highlight_group.WarningMsg   = [lightgoldenrod, lightpink, bold, none]
+    let highlight_group.ErrorMsg     = [honeydew, hotpink, bold, none]
     let highlight_group.EndOfBuffer  = [lightpink, none, bold, none]
 
     " Cursor

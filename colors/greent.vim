@@ -16,7 +16,6 @@ endif
 let g:colors_name = 'greent'
 
 function! s:set() abort
-    let palegreen       = {'gui': "#5fd75f" ,'cterm':        '77'}
     let deepskyblue     = {'gui': "#005f5f" ,'cterm':        '23'}
     let darkseagreen    = {'gui': "#d7ffaf" ,'cterm':        '193'}
     let honeydew        = {'gui': "#d7ffd7" ,'cterm':        '194'}
@@ -30,7 +29,7 @@ function! s:set() abort
     let steelblue       = {'gui': "#5fafff" ,'cterm':        '75'}
     let cornflowerblue  = {'gui': "#5f87ff" ,'cterm':        '69'}
     let khaki           = {'gui': "#d7d75f" ,'cterm':        '185'}
-    let salmon          = {'gui': "#ff875f" ,'cterm':        '209'}
+    let salmon          = {'gui': "#FFA98C" ,'cterm':        '209'}
     let darkerseagreen  = {'gui': "#afd787" ,'cterm':        '150'}
     let lightpink       = {'gui': "#d7d7af" ,'cterm':        '187'}
     let lightsalmon     = {'gui': "#ffaf87" ,'cterm':        '175'}
@@ -44,11 +43,11 @@ function! s:set() abort
     let boldunderline   = {'gui': "bold,underline", "cterm": "bold,underline"}
     let bolditalic      = {'gui': "bold,italic", "cterm":    "bold,italic"}
 
-    let highlight_group              = {}
+    let highlight_group = {}
 
     " General
     let highlight_group.Normal       = [deepskyblue, darkseagreen, none, none]
-    let highlight_group.Visual       = [none, khaki, none, none]
+    let highlight_group.Visual       = [chartreuse, honeydew, bold, none]
     let highlight_group.ColorColumn  = [none, honeydew, none, none]
     let highlight_group.SignColumn   = [deeppink, none, none, none]
     let highlight_group.IncSearch    = [deepskyblue, hotpink, none, none]
@@ -128,4 +127,3 @@ hi link NerdTreeOpenable    Comment
 hi link NerdTreeClosable    Special
 hi link NerdTreeDir         Statement
 hi link NerdTreeDirSlash    Identifier
-
